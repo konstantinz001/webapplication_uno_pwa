@@ -76,11 +76,10 @@ export default {
       });
 
       if (ref.setStack === false) {
+        this.setStack = true;
         document
           .getElementById("pullStack")
           .addEventListener("click", function () {
-            console.log(ref.setStack);
-            ref.setStack = true;
             ref.getCard();
           });
       }
@@ -173,7 +172,7 @@ export default {
         '<img class="img-fluid handCards" src="' +
           require("@/assets/pics/cards/" +
             ref.setCardPicPath(ref.playStackCard)) +
-          '" width="100" id= "PlayStack">'
+          '" width="10%" id= "PlayStack">'
       );
       $("#handCard").empty();
       this.playerCardsCurrent.forEach((handcard) => {
@@ -181,7 +180,7 @@ export default {
           $("#handCard").append(
             '<img class="img-fluid handCards" src="' +
               require("@/assets/pics/cards/" + ref.setCardPicPath(handcard)) +
-              '" width="100" id= ' +
+              '" width="10%" id= ' +
               index +
               ">"
           );
@@ -189,7 +188,7 @@ export default {
           $("#handCard").append(
             '<img class="img-fluid handCards" src="' +
               require("@/assets/pics/cards/" + ref.setCardPicPath(handcard)) +
-              '" width="100" id= ' +
+              '" width="10%" id= ' +
               index +
               ">"
           );

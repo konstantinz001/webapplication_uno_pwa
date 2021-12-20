@@ -1,9 +1,13 @@
 <template>
   <div>
+    <v-container>
+            <v-row>
+
+                <v-col cols="12" sm="4" md="12">
     <br /><br /><br />
     <div class="maincontent_Center">
       <h1>WELCOME TO UNO</h1>
-      <img src="../assets/pics/UNO_Logo.png" width="300" />
+      <img src="../assets/pics/UNO_Logo.png" width="40%" />
       <br />
       <br />
       <hr />
@@ -11,6 +15,9 @@
       <a href="https://github.com/konstantinz001/UNO_WebApplication" target="_blank">
       <button class="glow-on-hover" type="button">GitHub</button></a> <br><br>
     </div>
+    </v-col>
+  </v-row>
+  </v-container>
   </div>
 </template>
 

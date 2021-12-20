@@ -1,5 +1,10 @@
 <template>
-  <div>
+<div>
+    <v-container>
+            <v-row>
+
+                <v-col cols="12" sm="4" md="12">
+                  
     <v-app-bar
       color="bg-dark navbar-dark accent-4"
       dense
@@ -35,6 +40,9 @@
 
       </v-menu>
     </v-app-bar>
+  </v-col>
+  </v-row>
+  </v-container>
   </div>
 </template>
 
@@ -43,10 +51,14 @@ export default {
   data() {
     return {
       items: [
-          { title: 'Home', icon: 'mdi-home', to: '/' },
-          { title: 'New Game', icon: 'mdi-microsoft-xbox-controller', to: '/game' },
-          { title: 'About', icon: 'mdi-information', to: '/about' },
-        ],
+        { title: "Home", icon: "mdi-home", to: "/" },
+        {
+          title: "New Game",
+          icon: "mdi-microsoft-xbox-controller",
+          to: "/game",
+        },
+        { title: "About", icon: "mdi-information", to: "/about" },
+      ],
     };
   },
 };

@@ -1,5 +1,9 @@
 <template>
   <div>
+    <v-container>
+            <v-row>
+
+                <v-col cols="12" sm="4" md="12">
     <br />
     <br />
     <br />
@@ -7,7 +11,7 @@
 
       <h1>UNO - Web Application</h1>
       <br />
-      <img src="../assets/pics/UNO_Logo.png" width="300"/>
+      <img src="../assets/pics/UNO_Logo.png" width="40%"/>
       <br />
       <br />
       The classic UNO-Game, created in Scala. This is the coursework for Web Applications class at <a href="https://www.htwg-konstanz.de/">University of Applied Sciences Constance (HTWG Konstanz)</a> for fall 2021.
@@ -189,6 +193,9 @@
           <br><br>
       </div>
     </div>
+    </v-col>
+  </v-row>
+  </v-container>
   </div>
 </template>
 
