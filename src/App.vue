@@ -273,7 +273,7 @@ export default {
   created() {
     var ref = this;
     console.log("Starting connection to UNO-WebSocket Server");
-    this.connection = new WebSocket("ws://localhost:9000/websocket");
+    this.connection = new WebSocket("ws://uno-play.herokuapp.com/websocket");
     this.connection.onopen = function (event) {
       //console.log(event)
       console.log("Successfully connected to UNO-Websocket Server");
