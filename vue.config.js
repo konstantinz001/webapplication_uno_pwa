@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: '/Github-Page/',
+  publicPath: '/webapplication_uno_pwa/',
   transpileDependencies: [
     'vuetify'
   ],
