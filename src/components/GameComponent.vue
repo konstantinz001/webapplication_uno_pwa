@@ -71,7 +71,7 @@ export default {
   created() {
     let options = {
       headers: { "Content-Type": "application/" },
-      url: "http://localhost:9000/newGame",
+      url: "https://uno-play.herokuapp.com/newGame",
       method: "get",
     };
     let result = axios(options);

@@ -11,7 +11,7 @@
       dark
     >
 
-    <v-app-bar-nav-icon href="http://localhost:8080/">
+    <v-app-bar-nav-icon href="https://uno-vue.herokuapp.com/">
         <v-img src="../assets/pics/UNO_Logo.png" width="50" />
     </v-app-bar-nav-icon> 
 

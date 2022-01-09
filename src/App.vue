@@ -43,7 +43,7 @@ export default {
     returnFromColorCards: function () {
       let options = {
         headers: { "Content-Type": "application/" },
-        url: "http://localhost:9000/tui",
+        url: "https://uno-play.herokuapp.com/tui",
         method: "get",
       };
       let result = axios(options);
@@ -237,7 +237,7 @@ export default {
       }
       let options = {
         headers: { "Content-Type": "application/json" },
-        url: "http://localhost:9000/set/" + cardIndex,
+        url: "https://uno-play.herokuapp.com/set/" + cardIndex,
         method: "get",
         data: json,
       };
@@ -254,7 +254,7 @@ export default {
       });
       let options = {
         headers: { "Content-Type": "application/json" },
-        url: "http://localhost:9000/get",
+        url: "https://uno-play.herokuapp.com/get",
         method: "get",
         data: json,
       };
