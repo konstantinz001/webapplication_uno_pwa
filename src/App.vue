@@ -12,7 +12,7 @@
 
 <script>
 import axios from "axios";
-import NavigationBar from "@/components/NavigationBar.vue";
+import NavigationBar from "./components/NavigationBar.vue";
 export default {
   name: "App",
   components: {
@@ -66,11 +66,11 @@ export default {
       document.getElementById("unoCall").addEventListener("click", function () {
         if (this.callUno === true) {
           this.callUno = false;
-          let imgSrc = require("@/assets/pics/UNO_Logo.png");
+          let imgSrc = require("./assets/pics/UNO_Logo.png");
           $("#unoCall").attr("src", imgSrc);
         } else {
           this.callUno = true;
-          let imgSrc = require("@/assets/pics/CallUno.png");
+          let imgSrc = require("./assets/pics/CallUno.png");
           $("#unoCall").attr("src", imgSrc);
         }
       });
@@ -161,7 +161,7 @@ export default {
       $("#overlayWish").css("visibility", "collapse");
       $("#uno-GameField").css("visibility", "visible");
       $("#wishGame-GameField").css("visibility", "collapse");
-      $("#unoCall").attr("src", require("@/assets/pics/UNO_Logo.png"));
+      $("#unoCall").attr("src", require("./assets/pics/UNO_Logo.png"));
       $("#gameMessage").empty();
       $("#gameMessage").append(
         "<h4>PLAYER " + this.playernameCurrent + " it´s your turn</h4>"
@@ -170,7 +170,7 @@ export default {
 
       $("#stackCard").append(
         '<img class="img-fluid handCards" src="' +
-          require("@/assets/pics/cards/" +
+          require("./assets/pics/cards/" +
             ref.setCardPicPath(ref.playStackCard)) +
           '" width="10%" id= "PlayStack">'
       );
@@ -179,7 +179,7 @@ export default {
         if (handcard.includes("black")) {
           $("#handCard").append(
             '<img class="img-fluid handCards" src="' +
-              require("@/assets/pics/cards/" + ref.setCardPicPath(handcard)) +
+              require("./assets/pics/cards/" + ref.setCardPicPath(handcard)) +
               '" width="10%" id= ' +
               index +
               ">"
@@ -187,7 +187,7 @@ export default {
         } else {
           $("#handCard").append(
             '<img class="img-fluid handCards" src="' +
-              require("@/assets/pics/cards/" + ref.setCardPicPath(handcard)) +
+              require("./assets/pics/cards/" + ref.setCardPicPath(handcard)) +
               '" width="10%" id= ' +
               index +
               ">"
