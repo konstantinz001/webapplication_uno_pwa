@@ -25,6 +25,17 @@
 
       <v-spacer></v-spacer>
 
+      <template v-if="user.loggedIn">
+        <v-btn icon @click.prevent="signOut" class="text-right">
+          <v-icon>mdi-arrow-left</v-icon>
+        </v-btn>
+      </template>
+      <template v-else>
+        <v-btn @click.prevent="login" class="text-right">
+          <v-icon>mdi-arrow-right</v-icon>
+        </v-btn>
+      </template>
+
       <v-btn icon href="https://github.com/konstantinz001/UNO_WebApplication" target="_blank">
         <v-icon>mdi-heart</v-icon>
       </v-btn>
@@ -46,8 +57,11 @@
   </div>
 </template>
 
+
 <script>
+import { firebaseAuth } from "@/main";
 export default {
+  name: "Navigation",
   data() {
     return {
       items: [
@@ -58,8 +72,33 @@ export default {
           to: "/game",
         },
         { title: "About", icon: "mdi-information", to: "/about" },
+        { title: "Authentication", icon: "mdi-account", to: "/authentication" },
       ],
+      auth: firebaseAuth,
+      name: "",
     };
+  },
+  computed: {
+    user() {
+      return this.$store.getters.user;
+    },
+  },
+  methods: {
+    signOut() {
+      firebaseAuth
+        .getAuth()
+        .signOut()
+        .then(() => {
+          this.$router.replace({
+            name: "Home",
+          });
+        });
+    },
+    login() {
+      this.$router.push({
+        name: "Authentication",
+      });
+    },
   },
 };
 </script>
