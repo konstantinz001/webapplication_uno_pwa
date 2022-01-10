@@ -22,7 +22,7 @@
         >
           <v-btn
               x-large
-              color="rgba(192,141,43,255)"
+              color="rgba(55, 151, 17)"
               @click.prevent="login"
           >Login</v-btn>
         </v-col>

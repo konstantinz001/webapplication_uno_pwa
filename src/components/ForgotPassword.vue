@@ -10,6 +10,7 @@
                 <label
                   for="email"
                   class="
+                    authText
                     col-md-4 col-form-label
                     text-md-right
                     align-self-center
@@ -33,7 +34,7 @@
                 <div class="col-md-6 offset-md-4 auth-button">
                   <v-btn
                     type="submit"
-                    color="rgba(192,141,43,255)"
+                    color="rgba(215, 38, 0)"
                     class="btn btn-primary mr-10"
                     @click="back"
                   >
@@ -42,7 +43,7 @@
                   </v-btn>
                   <v-btn
                     type="submit"
-                    color="rgba(192,141,43,255)"
+                    color="rgba(55, 151, 17)"
                     class="btn btn-primary"
                     @click="resetPassword"
                   >

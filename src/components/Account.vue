@@ -28,7 +28,7 @@
                 ></div>
                 <v-btn
                   v-else
-                  color="rgba(192,141,43,255)"
+                  color="rgba(55, 151, 17)"
                   type="submit"
                   class="btn btn-primary mr-10"
                   @click="changeEmail"
@@ -39,7 +39,7 @@
                     auth.getAuth().currentUser.email.includes('@gmail.com') ||
                     auth.getAuth().currentUser.email.includes('@googlemail.com')
                   "
-                  color="rgba(192,141,43,255)"
+                  color="rgba(55, 151, 17)"
                   type="submit"
                   class="btn btn-primary"
                   @click="reauthenticateDeleteGoogleAccount"
@@ -48,7 +48,7 @@
                 <v-dialog v-else v-model="dialog" persistent max-width="600px">
                   <template v-slot:activator="{ on, attrs }">
                     <v-btn
-                      color="rgba(192,141,43,255)"
+                      color="rgba(55, 151, 17)"
                       type="submit"
                       class="btn btn-primary mr-10"
                       v-bind="attrs"

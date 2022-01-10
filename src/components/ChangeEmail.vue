@@ -6,7 +6,7 @@
           <div class="maincontent_Center"><h3>Change Email</h3></div>
           <div>
             <div class="form-group row">
-              <label for="email" class="col-md-4 col-form-label text-md-right align-self-center">Email</label>
+              <label for="email" class="col-md-4 col-form-label text-md-right align-self-center authText">Email</label>
               <div class="col-md-6">
                 <input
                     id="email"
@@ -24,7 +24,7 @@
               <div class="col-md-6 offset-md-4 auth-button">
                 <v-btn
                     type="submit"
-                    color="rgba(192,141,43,255)"
+                    color="rgba(215, 38, 0)"
                     class="btn btn-primary mr-10"
                     @click="back">
                   <v-icon>mdi-arrow-left</v-icon>
@@ -32,7 +32,7 @@
                 </v-btn>
                                     <v-btn
                     type="submit"
-                    color="rgba(192,141,43,255)"
+                    color="rgba(55, 151, 17)"
                     class="btn btn-primary"
                     @click="changingEmail()"
                     >Save
