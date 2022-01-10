@@ -44,19 +44,6 @@
                   </v-btn>
               </div>
             </div>
-            <v-snackbar v-model="snackbar">
-              {{ snackbarText }}
-              <template v-slot:action="{ attrs }">
-                <v-btn
-                  color="red"
-                  text
-                  v-bind="attrs"
-                  @click="snackbar = false"
-                >
-                  Close
-                </v-btn>
-              </template>
-            </v-snackbar>
           </div>
         </v-col>
       </v-row>
@@ -74,8 +61,6 @@ export default {
       password: "",
       newPassword: "",
       authStatus: "account",
-      snackbar: false,
-      snackbarText: "Password successful changed",
       dialog: false,
     };
   },
@@ -93,7 +78,6 @@ export default {
         .catch((error) => {
           console.log(error);
         });
-      this.snackbar = true;
     },
   },
 };

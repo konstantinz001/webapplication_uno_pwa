@@ -93,12 +93,10 @@ export default {
         password: "",
       },
       loginStatus: "login",
-      snackbarStatus: "register",
     };
   },
   methods: {
     async register() {
-      this.$emit('snackbarEvent', this.snackbarStatus)
       await firebaseAuth
         .createUserWithEmailAndPassword(
           firebaseAuth.getAuth(),
@@ -110,10 +108,6 @@ export default {
             url: `${process.env.VUE_APP_HOST_NAME}?email=${data.user.email}`,
           };
           firebaseAuth.sendEmailVerification(data.user, actionCodeSettings);
-          /*data.user
-                .updateProfile({
-                  displayName: this.form.name
-                })*/
         })
         .catch((err) => {
           this.error = err.message;

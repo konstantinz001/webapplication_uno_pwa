@@ -63,7 +63,6 @@ export default {
       this.authStatus = "login";
       await firebaseAuth.updateEmail(firebaseAuth.getAuth().currentUser, this.newEmail)
       this.$emit("statusEvent", this.authStatus);
-      this.$emit("snackbarEvent", this.snackbarStatus);
     },
     back() {
       this.$emit('statusEvent', this.authStatus)

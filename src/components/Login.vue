@@ -107,7 +107,6 @@ export default {
         password: "",
       },
       loginStatus: "",
-      snackbarStatus: "login",
     };
   },
   methods: {
@@ -120,7 +119,6 @@ export default {
       this.$emit("statusEvent", this.loginStatus);
     },
     async login() {
-      this.$emit('snackbarEvent', this.snackbarStatus)
       firebaseAuth
         .signInWithEmailAndPassword(
           firebaseAuth.getAuth(),
@@ -132,7 +130,6 @@ export default {
         });
     },
     registerWithGoogle() {
-      this.$emit('snackbarEvent', this.snackbarStatus)
       let provider = new firebaseAuth.GoogleAuthProvider();
       firebaseAuth
         .signInWithPopup(firebaseAuth.getAuth(), provider)

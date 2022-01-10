@@ -14,7 +14,7 @@
                 ></div>
                 <v-btn
                   v-else
-                  color="rgba(192,141,43,255)"
+                  color="rgba(55, 151, 17)"
                   type="submit"
                   class="btn btn-primary mr-10"
                   @click="changePassword"
@@ -121,7 +121,6 @@ export default {
       authStatus: "",
       loginStatus: true,
       dialog: false,
-      snackbarStatus: "delete",
       auth: firebaseAuth,
     };
   },
@@ -144,7 +143,6 @@ export default {
       await firebaseAuth.reauthenticateWithCredential(user, credential);
       this.authStatus = "login";
       this.$emit("statusEvent", this.authStatus);
-      this.$emit("snackbarEvent", this.snackbarStatus);
       await firebaseAuth
         .deleteUser(user)
         .then(() => {})
@@ -156,7 +154,6 @@ export default {
       const user = firebaseAuth.getAuth().currentUser;
       this.authStatus = "login";
       this.$emit("statusEvent", this.authStatus);
-      this.$emit("snackbarEvent", this.snackbarStatus);
       await firebaseAuth
         .deleteUser(user)
         .then(() => {})
